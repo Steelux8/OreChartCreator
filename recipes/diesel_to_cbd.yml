@@ -1,0 +1,93 @@
+  title: Diesel → CBD Processing
+  steps:
+  - id: recipe_01
+    inputs:
+    - item: Oil
+      amount: 300000.0
+    outputs:
+    - item: Sulfuric Gas
+      amount: 360000
+    - item: Sulfuric Naphtha
+      amount: 120000
+    - item: Sulfuric Light Fuel
+      amount: 300000
+    - item: Sulfuric Heavy Fuel
+      amount: 90000
+    - item: Naphthenic Acid
+      amount: 15000
+    method: '01: Oil DT Distillation'
+    group: Fuel Processing
+  - id: recipe_02
+    inputs:
+    - item: Sulfuric Gas
+      amount: 352000.0
+    - item: Hydrogen
+      amount: 44000.0
+    outputs:
+    - item: Refinery Gas
+      amount: 352000
+    - item: Hydrogen Sulfide
+      amount: 22000
+    method: '02: Gas Dessulfurizing'
+    group: Fuel Processing
+  - id: recipe_03
+    inputs:
+    - item: Sulfuric Naphtha
+      amount: 120000.0
+    - item: Hydrogen
+      amount: 20000.0
+    outputs:
+    - item: Naphtha
+      amount: 120000
+    - item: Hydrogen Sulfide
+      amount: 10000
+    method: '03: Naphtha Dessulfurizing'
+    group: Fuel Processing
+  - id: recipe_04
+    inputs:
+    - item: Sulfuric Light Fuel
+      amount: 300000.0
+    - item: Hydrogen
+      amount: 50000.0
+    outputs:
+    - item: Light Fuel
+      amount: 300000
+    - item: Hydrogen Sulfide
+      amount: 25000
+    method: '04: Light Fuel Dessulfurizing'
+    group: Fuel Processing
+  - id: recipe_05
+    inputs:
+    - item: Sulfuric Heavy Fuel
+      amount: 80000.0
+    - item: Hydrogen
+      amount: 20000.0
+    outputs:
+    - item: Heavy Fuel
+      amount: 80000
+    - item: Hydrogen Sulfide
+      amount: 10000
+    method: '05: Heavy Fuel Dessulfurizing'
+    group: Fuel Processing
+  - id: recipe_06
+    inputs:
+    - item: Hydrogen Sulfide
+      amount: 67000.0
+    - item: Oxygen
+      amount: 268000.0
+    outputs:
+    - item: Sulfuric Acid
+      amount: 67000
+    method: '06: Sulfuric Acid'
+    group: Fuel Processing
+  - id: recipe_07
+    inputs:
+    - item: Light Fuel
+      amount: 300000.0
+    - item: Heavy Fuel
+      amount: 60000.0
+    outputs:
+    - item: Diesel
+      amount: 360000
+    method: '07: Diesel Mixing'
+    group: Fuel Processing

@@ -1,0 +1,174 @@
+title: Default Ore Processing
+steps:
+  # Dual input paths
+  - from: Ore Block
+    to: Native Cluster
+    label: "1:1"
+    method: "Alchemist"
+    group: "Block Processing"
+
+  - from: Ore Block
+    to: Native Cluster
+    label: "1:1.75"
+    method: "Ref. Pickaxe"
+    group: "Block Processing"
+
+  # Core path
+  - from: Native Cluster
+    to: Crystallized Shard
+    label: "1:1"
+    method: "Alienist"
+    group: "First Stage"
+
+  - from: Crystallized Shard
+    to: Crystallized Ore
+    label: "7:2"
+    method: "Compactor"
+    group: "First Stage"
+
+  - from: Crystallized Ore
+    to: Dirty Ore
+    label: "1:1"
+    method: "Smelting"
+    group: "First Stage"
+
+  # Alternate path: Crystallized → Alchemical Dust
+  - from: Crystallized Ore
+    to: Rocky Chunk
+    label: "3:1"
+    method: "Agglomerator"
+    group: "Second Stage"
+
+  - from: Rocky Chunk
+    to: Ore Chunk
+    label: "4:2"
+    method: "BM Table"
+    group: "Second Stage"
+
+  - from: Ore Chunk
+    to: Alchemical Dust
+    label: "4:1"
+    method: "Infusion"
+    group: "Second Stage"
+
+  # Optional conversions into Dirty Ore
+  - from: Native Cluster
+    to: Dirty Ore
+    label: "6:1"
+    method: "Smelting"
+    group: "Optional Conversion"
+
+  - from: Rocky Chunk
+    to: Dirty Ore
+    label: "1:4"
+    method: "Smelting"
+    group: "Optional Conversion"
+
+  - from: Ore Chunk
+    to: Dirty Ore
+    label: "1:10"
+    method: "Smelting"
+    group: "Optional Conversion"
+
+  - from: Alchemical Dust
+    to: Dirty Ore
+    label: "1:48"
+    method: "Smelting"
+    group: "Optional Conversion"
+
+  # Final steps with byproduct
+  - from: Dirty Ore
+    to: Ore Dust
+    label: "1:12"
+    method: "SAG Mill"
+    group: "Dusting"
+    byproducts:
+      - item: Byp. Dusts (1,2,3)
+        label: "1:0.5"
+  
+  - from: Dirty Ore
+    to: Ore Dust
+    label: "1:32"
+    method: "Spectrometer"
+    group: "Dusting"
+    byproducts:
+      - item: Byp. Dusts (1,2,3)
+        label: "1:2"
+
+  - from: Dirty Ore
+    to: Ore Dust
+    label: "1:16"
+    method: "Sp. + Artifact"
+    group: "Dusting"
+    byproducts:
+      - item: Byp. Dusts (1,2,3)
+        label: "1:6"
+
+  - from: Dirty Ore
+    to: Ore Ingot
+    label: "1:12"
+    method: "Infernal Furnace"
+    group: "Dusting"
+    byproducts:
+      - item: Byp. Dusts (2)
+        label: "1:13.33"
+
+  - from: Dirty Ore
+    to: Ore Slurry
+    label: "1:56"
+    method: "Slurry"
+    group: "Mekanism"
+
+  - from: Ore Slurry
+    to: Pure Crystal
+    label: "2:1"
+    method: "Crystallization"
+    group: "Mekanism"
+
+  - from: Pure Crystal
+    to: Dirty Ore Dust
+    label: "1:1"
+    method: "Crushing"
+    group: "Mekanism"
+
+  - from: Dirty Ore Dust
+    to: Ore Dust
+    label: "1:1"
+    method: "Enrichment"
+    group: "Mekanism"
+
+  - from: Dirty Ore
+    to: Crushed Ore
+    label: "1:16"
+    method: "IC2 Maceration"
+    group: "IC2"
+
+  - from: Crushed Ore
+    to: Purified Crushed Ore
+    label: "1:1.22"
+    method: "Crushed Washing"
+    group: "IC2"
+
+  - from: Dirty Ore Dust
+    to: Purified Crushed Ore
+    label: "1:1"
+    method: "Dust Washing"
+    group: "IC2"
+
+  - from: Purified Crushed Ore
+    to: Ore Ingot
+    label: "1:6"
+    method: "Uranium Thermal Cent."
+    group: "IC2"
+
+  - from: Purified Crushed Ore
+    to: Ore Ingot
+    label: "1:1"
+    method: "Smelting"
+    group: "Final Smelting"  
+
+  - from: Ore Dust
+    to: Ore Ingot
+    label: "1:1"
+    method: "Special Smelting"
+    group: "Final Smelting"

@@ -1,0 +1,516 @@
+  title: Diesel → CBD Processing
+  steps:
+  - id: recipe_01
+    inputs:
+    - item: PtMP Dust
+      amount: 9
+    - item: Aqua Regia
+      amount: 9000
+    outputs:
+    - item: Platinum Residue Dust
+      amount: 9
+    - item: Platinum Concentrate
+      amount: 9000
+    method: '01: Platinum Start'
+    group: Main Line
+  - id: recipe_02
+    inputs:
+    - item: Platinum Concentrate
+      amount: 18000
+    - item: Ammonium Chloride
+      amount: 3600
+    outputs:
+    - item: Platinum Salt Dust
+      amount: 16
+    - item: Reprecipitated Platinum Dust
+      amount: 4
+    - item: Palladium Enriched Ammonia
+      amount: 3600
+    - item: Nitrogen Dioxide
+      amount: 9000
+    - item: Diluted Sulfuric Acid
+      amount: 9000
+    method: '02: Plat. Precipitation'
+    group: Platinum Processing
+  - id: recipe_03
+    inputs:
+    - item: Platinum Salt Dust
+      amount: 1
+    outputs:
+    - item: Refined Platinum Salt Dust
+      amount: 0.95
+    method: '03: Plat. Salt Dust Sifting'
+    group: Platinum Processing
+  - id: recipe_04
+    inputs:
+    - item: Refined Platinum Salt Dust
+      amount: 1
+    outputs:
+    - item: PtMP Dust
+      amount: 1
+    - item: Chlorine
+      amount: 87
+    method: '04: Plat. Salt Dust Recycle'
+    group: Platinum Processing
+  - id: recipe_05
+    inputs:
+    - item: Reprecipitated Platinum Dust
+      amount: 4
+    - item: Calcium Dust
+      amount: 1
+    outputs:
+    - item: Platinum Dust
+      amount: 2
+    - item: Calcium Chloride Dust
+      amount: 3
+    method: '05: Platinum Dust'
+    group: Platinum Processing
+  - id: recipe_06
+    inputs:
+    - item: Palladium Enriched Ammonia
+      amount: 1000
+    outputs:
+    - item: Palladium Salt Dust
+      amount: 1
+    method: '06: Pal. Precipitation 1'
+    group: Palladium Processing
+  - id: recipe_07
+    inputs:
+    - item: PaMP Dust
+      amount: 9
+    - item: Palladium Enriched Ammonia
+      amount: 9000
+    outputs:
+    - item: Palladium Salt Dust
+      amount: 16
+    - item: Reprecipitated Palladium Dust
+      amount: 2
+    method: '07: Pall. Precipitation 2'
+    group: Palladium Processing
+  - id: recipe_08
+    inputs:
+    - item: Palladium Salt Dust
+      amount: 1
+    outputs:
+    - item: PaMP Dust
+      amount: 0.95
+    method: '08: Pall. Salt Dust Sifting'
+    group: Palladium Processing
+  - id: recipe_09
+    inputs:
+    - item: Reprecipitated Palladium Dust
+      amount: 4
+    - item: Formic Acid
+      amount: 4000
+    outputs:
+    - item: Palladium Dust
+      amount: 2
+    - item: Ammonia
+      amount: 4000
+    - item: Ethylene
+      amount: 1000
+    - item: Water
+      amount: 1000
+    method: '09: Palladium Dust'
+    group: Palladium Processing
+  - id: recipe_10
+    inputs:
+    - item: Diluted Sulfuric Acid
+      amount: 1000
+    - item: Nitric Acid
+      amount: 1000
+    outputs:
+    - item: Aqua Regia
+      amount: 2000
+    method: '10: Aqua Regia'
+    group: Aqua Regia
+  - id: recipe_11
+    inputs:
+    - item: Nitrogen
+      amount: 1000
+    - item: Hydrogen
+      amount: 3000
+    outputs:
+    - item: Ammonia
+      amount: 1000
+    method: '11: Ammonia'
+    group: Aqua Regia
+  - id: recipe_12
+    inputs:
+    - item: Ammonia
+      amount: 1000
+    - item: Oxygen
+      amount: 4000
+    outputs:
+    - item: Nitric Acid
+      amount: 1000
+    - item: Water
+      amount: 1000
+    method: '12: Nitric Acid'
+    group: Aqua Regia
+  - id: recipe_13
+    inputs:
+    - item: Sodium Formate
+      amount: 2000
+    - item: Sulfuric Acid
+      amount: 1000
+    outputs:
+    - item: Sodium Sulfate
+      amount: 7
+    - item: Formic Acid
+      amount: 1000
+    method: '13: Formic Acid'
+    group: Other Chemicals
+  - id: recipe_14
+    inputs:
+    - item: Sodium Hydroxide Dust
+      amount: 3
+    - item: Carbon Monoxide
+      amount: 1000
+    outputs:
+    - item: Sodium Formate
+      amount: 1000
+    method: '14: Sodium Formate'
+    group: Other Chemicals
+  - id: recipe_15
+    inputs:
+    - item: Platinum Residue Dust
+      amount: 1
+    - item: Potassium Disulfate Fluid
+      amount: 360
+    outputs:
+    - item: Leach Residue Dust
+      amount: 1
+    - item: Rhodium Sulfate
+      amount: 360
+    method: '15: Rhodium Start'
+    group: Main Line
+  - id: recipe_16
+    inputs:
+    - item: Rhodium Sulfate
+      amount: 39000
+    - item: Water
+      amount: 36000
+    outputs:
+    - item: Leach Residue Dust
+      amount: 4
+    - item: Rhodium Sulfate Solution
+      amount: 39000
+    - item: Potassium Fluid
+      amount: 7200
+    method: '16: Rhodium Sulfate Solution'
+    group: Rhodium Processing
+  - id: recipe_17
+    inputs:
+    - item: Zinc Dust
+      amount: 1
+    - item: Rhodium Sulfate Solution
+      amount: 1000
+    outputs:
+    - item: Crude Rhodium Metal Dust
+      amount: 1
+    - item: Zinc Sulfate Dust
+      amount: 6
+    method: '17: Crude Rhodium Dust'
+    group: Rhodium Processing
+  - id: recipe_18
+    inputs:
+    - item: Crude Rhodium Metal Dust
+      amount: 1
+    - item: Salt
+      amount: 1
+    - item: Chlorine
+      amount: 1000
+    outputs:
+    - item: Rhodium Salt Dust
+      amount: 3
+    method: '18: Rhodium Salt Dust'
+    group: Rhodium Processing
+  - id: recipe_19
+    inputs:
+    - item: Rhodium Salt Dust
+      amount: 1
+    - item: Water
+      amount: 200
+    outputs:
+    - item: Rhodium Salt Solution
+      amount: 200
+    method: '19: Rhodium Salt Solution'
+    group: Rhodium Processing
+  - id: recipe_20
+    inputs:
+    - item: Sodium Nitrate Dust
+      amount: 5
+    - item: Rhodium Salt Solution
+      amount: 1000
+    outputs:
+    - item: Rhodium Nitrate Dust
+      amount: 1
+    - item: Salt
+      amount: 2
+    method: '20: Rhodium Nitrate Dust'
+    group: Rhodium Processing
+  - id: recipe_21
+    inputs:
+    - item: Rhodium Nitrate Dust
+      amount: 1
+    outputs:
+    - item: Rhodium Filter Cake Dust
+      amount: 0.95
+    method: '21: Rhodium Cake Sifting'
+    group: Rhodium Processing
+  - id: recipe_22
+    inputs:
+    - item: Rhodium Filter Cake Dust
+      amount: 1
+    - item: Water
+      amount: 1000
+    outputs:
+    - item: Rhodium Filter Cake Solution
+      amount: 1000
+    method: '22: Rhodium Cake Solution'
+    group: Rhodium Processing
+  - id: recipe_23
+    inputs:
+    - item: Rhodium Filter Cake Solution
+      amount: 1000
+    outputs:
+    - item: Reprecipitated Rhodium Dust
+      amount: 1
+    method: '23: Rhodium Precipitation'
+    group: Rhodium Processing
+  - id: recipe_24
+    inputs:
+    - item: Reprecipitated Rhodium Dust
+      amount: 1
+    - item: Hydrochloric Acid
+      amount: 1000
+    outputs:
+    - item: Rhodium Dust
+      amount: 1
+    - item: Chlorine
+      amount: 1000
+    - item: Ammonia
+      amount: 1000
+    method: '24: Rhodium Dust'
+    group: Rhodium Processing
+  - id: recipe_25
+    inputs:
+    - item: Potassium Disulfate Dust
+      amount: 1
+    outputs:
+    - item: Potassium Disulfate Fluid
+      amount: 144
+    method: '25: Potassium Dis. Extraction'
+    group: Other Chemicals
+  - id: recipe_26
+    inputs:
+    - item: Potassium Dust
+      amount: 2
+    - item: Sulfur Dust
+      amount: 2
+    - item: Oxygen
+      amount: 7000
+    outputs:
+    - item: Potassium Disulfate Dust
+      amount: 11
+    method: '26: Potassium Disulfate'
+    group: Other Chemicals
+  - id: recipe_27
+    inputs:
+    - item: Sodium Dust
+      amount: 1
+    - item: Nitric Acid
+      amount: 1000
+    outputs:
+    - item: Sodium Nitrate Dust
+      amount: 5
+    - item: Hydrogen
+      amount: 1000
+    method: '27: Sodium Nitrate'
+    group: Other Chemicals
+  - id: recipe_28
+    inputs:
+    - item: Leach Residue Dust
+      amount: 10
+    - item: Saltpeter
+      amount: 10
+    - item: Salt Water
+      amount: 1000
+    outputs:
+    - item: Sodium Ruthenate Dust
+      amount: 3
+    - item: Rarest Metal Residue
+      amount: 6
+    - item: Steam
+      amount: 1000
+    method: '28: Ruthenium Start'
+    group: Main Line
+  - id: recipe_29
+    inputs:
+    - item: Sodium Ruthenate Dust
+      amount: 6
+    - item: Chlorine
+      amount: 3000
+    outputs:
+    - item: Ruthenium Tetroxide Solution
+      amount: 9000
+    method: '29: Ruthenium Solution'
+    group: Ruthenium Processing
+  - id: recipe_30
+    inputs:
+    - item: Ruthenium Tetroxide Solution
+      amount: 1000
+    outputs:
+    - item: Hot Ruthenium Tetroxide Solution
+      amount: 2000
+    method: '30: Solution Heating'
+    group: Ruthenium Processing
+  - id: recipe_31
+    inputs:
+    - item: Hot Ruthenium Tetroxide Solution
+      amount: 9000
+    outputs:
+    - item: Salt
+      amount: 6
+    - item: Water
+      amount: 1800
+    - item: Ruthenium Tetroxide Fluid
+      amount: 7200
+    method: '31: Ruthenium Tetroxide'
+    group: Ruthenium Processing
+  - id: recipe_32
+    inputs:
+    - item: Ruthenium Tetroxide Fluid
+      amount: 1000
+    outputs:
+    - item: Ruthenium Tetroxide Dust
+      amount: 2000
+    method: '32: Tetroxide Solidifying'
+    group: Ruthenium Processing
+  - id: recipe_33
+    inputs:
+    - item: Ruthenium Tetroxide Dust
+      amount: 1
+    - item: Hydrochloric Acid
+      amount: 6000
+    outputs:
+    - item: Ruthenium Dust
+      amount: 1
+    - item: Chlorine
+      amount: 6000
+    - item: Water
+      amount: 2000
+    method: '33: Ruthenium Dust'
+    group: Ruthenium Processing
+  - id: recipe_34
+    inputs:
+    - item: Rarest Metal Residue
+      amount: 20
+    - item: Hydrochloric Acid
+      amount: 5000
+    outputs:
+    - item: Iridium Metal Residue Dust
+      amount: 10
+    - item: Acidic Osmium Solution
+      amount: 10000
+    method: '34: Iridium Start'
+    group: Main Line
+  - id: recipe_35
+    inputs:
+    - item: Iridium Metal Residue Dust
+      amount: 10
+    outputs:
+    - item: Iridium Dioxide Dust
+      amount: 10
+    - item: Sludge Residue Dust
+      amount: 10
+    method: '35: Iridium Dioxide'
+    group: Iridium Processing
+  - id: recipe_36
+    inputs:
+    - item: Iridium Dioxide Dust
+      amount: 10
+    - item: Hydrochloric Acid
+      amount: 10000
+    outputs:
+    - item: Acidic Iridium Solution
+      amount: 10000
+    method: '36: Iridium Solution'
+    group: Iridium Processing
+  - id: recipe_37
+    inputs:
+    - item: Acidic Iridium Solution
+      amount: 10000
+    - item: Ammonium Chloride
+      amount: 30000
+    outputs:
+    - item: Iridium Chloride Dust
+      amount: 10
+    - item: Ammonia
+      amount: 30000
+    method: '37: Iridium Chloride'
+    group: Iridium Processing
+  - id: recipe_38
+    inputs:
+    - item: Iridium Chloride Dust
+      amount: 10
+    - item: Calcium Dust
+      amount: 10
+    outputs:
+    - item: Iridium Dust
+      amount: 10
+    - item: Metallic Sludge Residue Dust
+      amount: 10
+    - item: Calcium Chloride Fluid
+      amount: 30000
+    method: '38: Iridium Dust'
+    group: Iridium Processing
+  - id: recipe_39
+    inputs:
+    - item: Acidic Osmium Solution
+      amount: 10000
+    outputs:
+    - item: Osmium Solution
+      amount: 1000
+    - item: Water
+      amount: 9000
+    method: '39: Osmium Start'
+    group: Main Line
+  - id: recipe_40
+    inputs:
+    - item: Osmium Solution
+      amount: 1000
+    - item: Hydrochloric Acid
+      amount: 6000
+    outputs:
+    - item: Osmium Dust
+      amount: 1
+    - item: Chlorine
+      amount: 7000
+    - item: Water
+      amount: 2000
+    method: '40: Osmium Dust'
+    group: Osmium Processing
+  - id: recipe_41
+    inputs:
+    - item: Ammonia
+      amount: 1000
+    - item: Hydrochloric Acid
+      amount: 1000
+    outputs:
+    - item: Ammonium Chloride
+      amount: 1000
+    method: '41: Ammonium Chloride'
+    group: Other Chemicals
+  - id: recipe_42
+    inputs:
+    - item: Salt
+      amount: 1
+    - item: Water
+      amount: 500
+    outputs:
+    - item: Salt Water
+      amount: 500
+    method: '42: Salt Water'
+    group: Other Chemicals
