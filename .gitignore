@@ -183,3 +183,4 @@ cython_debug/
 # Special files
 temp_graph.gv
 *.png
+graphviz_bin/
