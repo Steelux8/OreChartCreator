@@ -190,8 +190,6 @@ GRINDING_BALL_OPTIONS = {
 has_ic2_path_for_current_ore = False
 has_mekanism_path_for_current_ore = False
 
-DEFAULT_YAML = "recipes/default.yml"
-RECIPE_DIR = "recipes"
 GRAPH_OUTPUT_DIR = "graphs"
 forced_side_nodes = [
     "Water", 
@@ -232,6 +230,18 @@ EDGE_PALETTE = {
         "#A9CFF0","#F28B96","#E5B1F1","#F5B98E","#89DDE9","#9ED780",
     ],
 }
+
+def get_base_dir():
+    """Returns the correct base directory whether running as a .py script or compiled .exe."""
+    if getattr(sys, 'frozen', False):
+        # PyInstaller sets _MEIPASS directly to the '_internal' folder
+        return getattr(sys, '_MEIPASS', os.path.dirname(sys.executable))
+    return os.path.dirname(os.path.abspath(__file__))
+
+# Define absolute paths dynamically
+BASE_DIR = get_base_dir()
+RECIPE_DIR = os.path.join(BASE_DIR, "recipes")
+DEFAULT_YAML = os.path.join(RECIPE_DIR, "default.yml") # Adjust filename as needed
 
 def color_for_key(key: str) -> str:
     if not key:
